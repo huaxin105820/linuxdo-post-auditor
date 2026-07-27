@@ -1,0 +1,34 @@
+{
+  "name": "linuxdo-post-auditor",
+  "version": "0.2.0",
+  "description": "Offline preflight auditor and Codex Skill installer for user-authored LINUX DO forum post drafts.",
+  "type": "module",
+  "bin": {
+    "linuxdo-post-auditor": "./bin/cli.js"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "agents",
+    "references",
+    "scripts",
+    "bin"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "codex-skill",
+    "linuxdo",
+    "forum",
+    "moderation",
+    "preflight"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huaxin105820/linuxdo-post-auditor.git"
+  },
+  "scripts": {
+    "test": "node --test test/npm-install.test.js"
+  }
+}
