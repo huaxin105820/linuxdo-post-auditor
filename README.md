@@ -24,16 +24,15 @@ LINUX DO 禁止 AI 生成或润色发帖文字。本项目因此只做离线审�
 
 ## 使用方式
 
-### npm 安装
+### 一键安装到 Codex
 
-从当前 GitHub 仓库安装 CLI：
+在 PowerShell、Windows Terminal 或其他终端中运行：
 
 ```powershell
-npm install --global github:huaxin105820/linuxdo-post-auditor
-linuxdo-post-auditor install
+npx --yes github:huaxin105820/linuxdo-post-auditor install --force
 ```
 
-安装器会将 `SKILL.md`、`agents/`、`references/` 和 `scripts/` 复制到：
+这条命令会从 GitHub 下载最新版本，并将 Skill 直接安装到：
 
 ```text
 %USERPROFILE%\.codex\skills\linuxdo-post-auditor
@@ -45,9 +44,20 @@ linuxdo-post-auditor install
 %CODEX_HOME%\skills\linuxdo-post-auditor
 ```
 
-更新已有安装时使用：
+安装或更新完成后，在 Codex 中输入：
+
+```text
+使用 $linuxdo-post-auditor 审查我提供的 LINUX DO 发帖草稿。
+```
+
+如果 Codex 没有立即识别新安装的 Skill，请重启 Codex。详见 [Codex Skills 官方文档](https://learn.chatgpt.com/docs/build-skills#install-curated-skills-for-local-use)。
+
+### 可选：全局安装 CLI
+
+需要反复安装或更新时，可以先全局安装：
 
 ```powershell
+npm install --global github:huaxin105820/linuxdo-post-auditor
 linuxdo-post-auditor install --force
 ```
 
@@ -57,27 +67,19 @@ linuxdo-post-auditor install --force
 linuxdo-post-auditor path
 ```
 
-仓库发布到 npm registry 后，安装命令可以简化为：
+### 在 Codex 中使用
 
-```powershell
-npm install --global linuxdo-post-auditor
-linuxdo-post-auditor install
-```
-
-### 作为 Codex Skill
-
-显式引用技能目录：
+安装后可以直接点名 Skill：
 
 ```text
-使用 D:\Linux Do\linuxdo-post-auditor\SKILL.md
-审查我提供的 LINUX DO 发帖草稿。
+使用 $linuxdo-post-auditor 审查我提供的 LINUX DO 发帖草稿。
 ```
 
-如果要让 Codex 自动发现技能，需要将整个目录安装到 Codex 的 skills 目录。
+也可以在 Codex 的 Skills 列表中确认 `linuxdo-post-auditor` 已被发现。
 
 ### 使用离线脚本
 
-准备一个 UTF-8 JSON 文件，例如 `draft.json`：
+克隆仓库后，在仓库根目录准备一个 UTF-8 JSON 文件，例如 `draft.json`：
 
 ```json
 {
@@ -100,17 +102,13 @@ linuxdo-post-auditor install
 运行 Markdown 报告：
 
 ```powershell
-python "D:\Linux Do\linuxdo-post-auditor\scripts\audit_draft.py" `
-  --input draft.json `
-  --format markdown
+python scripts/audit_draft.py --input draft.json --format markdown
 ```
 
 运行机器可读的 JSON 报告：
 
 ```powershell
-python "D:\Linux Do\linuxdo-post-auditor\scripts\audit_draft.py" `
-  --input draft.json `
-  --format json
+python scripts/audit_draft.py --input draft.json --format json
 ```
 
 ## 审核结论
@@ -130,6 +128,8 @@ python "D:\Linux Do\linuxdo-post-auditor\scripts\audit_draft.py" `
 
 ```text
 ├── SKILL.md                         # Codex 的技能指令
+├── package.json                     # npm 包和 CLI 配置
+├── bin/cli.js                       # Codex Skill 安装器
 ├── agents/openai.yaml               # 技能 UI 元数据
 ├── references/
 │   ├── core-rules.md                # 全局规则快照
@@ -137,9 +137,10 @@ python "D:\Linux Do\linuxdo-post-auditor\scripts\audit_draft.py" `
 │   ├── post-type-checklists.json    # 特殊帖子必填字段
 │   ├── pinned-rules.md              # 置顶规则人工录入说明
 │   └── rule-sources.md              # 来源和版本记录
-└── scripts/
+├── scripts/
     ├── audit_draft.py               # 离线审核脚本
     └── test_audit_draft.py          # 单元测试
+└── test/npm-install.test.js         # npm 安装器测试
 ```
 
 ## 规则维护
