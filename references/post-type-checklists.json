@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "post_types": {
+    "general": {
+      "label": "普通讨论",
+      "required_metadata": [],
+      "questions": {}
+    },
+    "resource": {
+      "label": "资源分享",
+      "required_metadata": ["resource_name", "description", "source", "version_or_date", "platform"],
+      "questions": {
+        "resource_name": "资源的准确名称是什么？",
+        "description": "资源的用途和主要内容是什么？",
+        "source": "资源来自哪里，原始来源是什么？",
+        "version_or_date": "资源版本或更新时间是什么？",
+        "platform": "适用系统、设备或环境是什么？"
+      }
+    },
+    "cloud_drive": {
+      "label": "网盘资源",
+      "required_metadata": ["resource_name", "description", "source", "drive_providers", "browser_accessible"],
+      "questions": {
+        "resource_name": "网盘资源的准确名称是什么？",
+        "description": "资源包含什么内容？",
+        "source": "资源来源是什么？",
+        "drive_providers": "使用了哪些网盘提供商？",
+        "browser_accessible": "每个链接能否用常用浏览器直接打开，而不强制使用 App？"
+      }
+    },
+    "promotion": {
+      "label": "普通推广",
+      "required_metadata": ["project_name", "destination", "posts_this_week", "login_required", "linuxdo_connect"],
+      "questions": {
+        "project_name": "推广项目的名称是什么？",
+        "destination": "链接最终指向什么网站、产品或服务？",
+        "posts_this_week": "本账号本周已经发布了几篇推广内容？",
+        "login_required": "目标网站或程序是否必须登录？",
+        "linuxdo_connect": "如需登录，是否已按当前规则接入 LINUX DO Connect？"
+      }
+    },
+    "open_source_promotion": {
+      "label": "开源推广",
+      "required_metadata": ["project_name", "repository", "license", "posts_this_week"],
+      "questions": {
+        "project_name": "开源项目名称是什么？",
+        "repository": "完整开源仓库地址是什么？",
+        "license": "项目使用什么开源许可证？",
+        "posts_this_week": "本账号本周已经发布了几篇推广内容？"
+      }
+    },
+    "public_welfare_promotion": {
+      "label": "公益推广",
+      "required_metadata": ["project_name", "public_welfare_basis", "destination", "posts_this_week", "login_required", "linuxdo_connect"],
+      "questions": {
+        "project_name": "公益项目名称是什么？",
+        "public_welfare_basis": "为什么它属于纯公益且不存在间接引流？",
+        "destination": "链接最终指向哪里？",
+        "posts_this_week": "本账号本周已经发布了几篇推广内容？",
+        "login_required": "项目是否必须登录？",
+        "linuxdo_connect": "如需登录，是否已按当前规则接入 LINUX DO Connect？"
+      }
+    },
+    "advanced_promotion": {
+      "label": "高级推广",
+      "required_metadata": ["project_name", "qualification_confirmed", "posts_today"],
+      "questions": {
+        "project_name": "推广项目名称是什么？",
+        "qualification_confirmed": "账号是否具备并佩戴当前规则要求的头衔或资格？",
+        "posts_today": "本账号今天已经发布了几篇高级推广内容？"
+      }
+    },
+    "trade": {
+      "label": "交易/置换",
+      "required_metadata": ["item", "provenance", "price", "transaction_method", "delivery", "risk_or_after_sales"],
+      "questions": {
+        "item": "交易的具体商品或服务是什么？",
+        "provenance": "商品或服务的合法来源是什么？",
+        "price": "明确价格是多少？",
+        "transaction_method": "采用什么交易和付款方式？",
+        "delivery": "如何交付？",
+        "risk_or_after_sales": "风险、验货和售后规则是什么？"
+      }
+    },
+    "job": {
+      "label": "招聘/求职",
+      "required_metadata": ["role", "skills", "location_or_remote", "compensation", "contact", "deadline"],
+      "questions": {
+        "role": "职位或求职方向是什么？",
+        "skills": "需要或具备哪些技能？",
+        "location_or_remote": "工作地点在哪里，是否支持远程？",
+        "compensation": "薪资或预算范围是什么？",
+        "contact": "使用什么合规联系方式？",
+        "deadline": "信息有效到什么时候？"
+      }
+    },
+    "help": {
+      "label": "技术求助",
+      "required_metadata": ["environment", "attempted", "error_or_symptom", "expected"],
+      "questions": {
+        "environment": "系统、版本、依赖和运行环境是什么？",
+        "attempted": "已经尝试了哪些方法？",
+        "error_or_symptom": "完整报错或可观察到的现象是什么？",
+        "expected": "期望结果是什么？"
+      }
+    },
+    "news": {
+      "label": "资讯/新闻",
+      "required_metadata": ["source", "published_at", "summary_scope"],
+      "questions": {
+        "source": "原始消息或报道来源是什么？",
+        "published_at": "原始内容发布时间是什么？",
+        "summary_scope": "哪些内容是事实转述，哪些是自己的理解？"
+      }
+    },
+    "book_note": {
+      "label": "读书笔记",
+      "required_metadata": ["book_title", "author", "personal_notes"],
+      "questions": {
+        "book_title": "书名是什么？",
+        "author": "作者是谁？",
+        "personal_notes": "你自己写的阅读心得和思考是什么？"
+      }
+    },
+    "giveaway": {
+      "label": "福利/抽奖",
+      "required_metadata": ["benefit", "eligibility", "rules", "deadline"],
+      "questions": {
+        "benefit": "具体福利或奖品是什么？",
+        "eligibility": "参与资格是什么？",
+        "rules": "参与和开奖规则是什么？",
+        "deadline": "截止时间和开奖时间是什么？"
+      }
+    },
+    "collaborative_doc": {
+      "label": "共建文档",
+      "required_metadata": ["scope", "structure", "contribution_method"],
+      "questions": {
+        "scope": "文档覆盖范围是什么？",
+        "structure": "文档当前结构是什么？",
+        "contribution_method": "其他用户应如何参与共建？"
+      }
+    }
+  }
+}

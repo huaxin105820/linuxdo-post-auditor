@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "observed": "2026-07-27",
+  "source": "https://linux.do/guidelines",
+  "categories": {
+    "开发调优": {
+      "aliases": ["develop", "开发", "技术"],
+      "purpose": "开发、测试、调试、部署和优化。",
+      "preferred_post_types": ["general", "help"],
+      "pinned_status": "required",
+      "notes": ["技术内容仍需选择合适标签。"]
+    },
+    "国产替代": {
+      "aliases": ["国产代替", "国产技术"],
+      "purpose": "中国智造、国产软件硬件和技术自强相关讨论。",
+      "preferred_post_types": ["general", "resource", "news"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "资源荟萃": {
+      "aliases": ["resources", "资源"],
+      "purpose": "软件、开源仓库、视频课程、书籍等资源分享。",
+      "preferred_post_types": ["resource", "open_source_promotion"],
+      "pinned_status": "required",
+      "notes": ["网盘资源改发“网盘资源”。"]
+    },
+    "网盘资源": {
+      "aliases": ["cloud drive", "网盘"],
+      "purpose": "网盘资源专用，属于资源荟萃的子版块。",
+      "preferred_post_types": ["cloud_drive"],
+      "pinned_status": "required",
+      "notes": ["每个网盘提供商都必须有对应标签。", "链接必须能用常用浏览器直接打开。"]
+    },
+    "文档共建": {
+      "aliases": ["docs", "wiki", "文档"],
+      "purpose": "以 Wiki 形式共同维护各类文档。",
+      "preferred_post_types": ["collaborative_doc"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "跳蚤市场": {
+      "aliases": ["market", "交易", "拼车"],
+      "purpose": "实体和虚拟物品供求、交易、置换和拼车。",
+      "preferred_post_types": ["trade"],
+      "pinned_status": "required",
+      "notes": ["可能需要加入交易分组后才可见。", "必须明盘价格和交易方式。"]
+    },
+    "积分乐园": {
+      "aliases": ["积分"],
+      "purpose": "积分交流和交换。",
+      "preferred_post_types": ["points"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "非我莫属": {
+      "aliases": ["jobs", "求职", "招聘"],
+      "purpose": "招聘、求职、找人和找工作等供求信息。",
+      "preferred_post_types": ["job"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "读书成诗": {
+      "aliases": ["books", "读书"],
+      "purpose": "读书笔记和阅读心得。",
+      "preferred_post_types": ["book_note"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "扬帆起航": {
+      "aliases": ["startup", "推广", "创业"],
+      "purpose": "创业历程、创业成果、项目展示和普通推广。",
+      "preferred_post_types": ["promotion", "open_source_promotion", "public_welfare_promotion", "advanced_promotion"],
+      "pinned_status": "required",
+      "notes": ["普通推广必须使用“推广”标签。", "其他推广类型按当前规则使用对应标签。"]
+    },
+    "前沿快讯": {
+      "aliases": ["news", "资讯", "新闻"],
+      "purpose": "科技资讯、行业动态和新闻类内容。",
+      "preferred_post_types": ["news"],
+      "pinned_status": "required",
+      "notes": ["转载或整理内容应标明来源。"]
+    },
+    "网络忆往": {
+      "aliases": ["网络记忆"],
+      "purpose": "截图中存在，但当前打包规则没有足够的官方用途说明。",
+      "preferred_post_types": [],
+      "pinned_status": "required",
+      "notes": ["必须让用户提供当前分类说明或置顶帖，不得仅按名称推断。"]
+    },
+    "福利羊毛": {
+      "aliases": ["giveaway", "福利", "羊毛", "抽奖"],
+      "purpose": "优惠、抽奖等福利信息。",
+      "preferred_post_types": ["giveaway"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "搞七捻三": {
+      "aliases": ["闲聊", "生活", "影音", "游戏"],
+      "purpose": "衣食住行、影音游戏等日常闲聊。",
+      "preferred_post_types": ["general"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "社区孵化": {
+      "aliases": ["incubator", "孵化", "创新想法"],
+      "purpose": "提出创新想法和申请社区项目支持。",
+      "preferred_post_types": ["incubation"],
+      "pinned_status": "required",
+      "notes": []
+    },
+    "虫洞广场": {
+      "aliases": ["虫洞"],
+      "purpose": "截图中存在，但当前打包规则没有足够的官方用途说明。",
+      "preferred_post_types": [],
+      "pinned_status": "required",
+      "notes": ["必须让用户提供当前分类说明或置顶帖，不得仅按名称推断。"]
+    },
+    "运营反馈": {
+      "aliases": ["feedback", "反馈", "公告"],
+      "purpose": "社区建议、反馈和公告。",
+      "preferred_post_types": ["feedback"],
+      "pinned_status": "required",
+      "notes": ["对举报处理有异议时通常应私信管理，而不是新开主题。"]
+    },
+    "深海幽域": {
+      "aliases": ["深海", "发癫"],
+      "purpose": "发癫、轻松娱乐或无甚意义的话题，通常不上信息流。",
+      "preferred_post_types": ["general"],
+      "pinned_status": "required",
+      "notes": []
+    }
+  }
+}

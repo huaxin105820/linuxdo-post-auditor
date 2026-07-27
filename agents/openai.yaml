@@ -1,0 +1,4 @@
+interface:
+  display_name: "Linux DO 发帖预审"
+  short_description: "审查 Linux DO 草稿的版规、分区、标签和缺失项"
+  default_prompt: "使用 $linuxdo-post-auditor 审查我提供的 Linux DO 发帖草稿，列出风险和缺失项，不要代写正文。"
