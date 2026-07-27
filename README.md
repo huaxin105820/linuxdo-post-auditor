@@ -24,6 +24,46 @@ LINUX DO 禁止 AI 生成或润色发帖文字。本项目因此只做离线审�
 
 ## 使用方式
 
+### npm 安装
+
+从当前 GitHub 仓库安装 CLI：
+
+```powershell
+npm install --global github:huaxin105820/linuxdo-post-auditor
+linuxdo-post-auditor install
+```
+
+安装器会将 `SKILL.md`、`agents/`、`references/` 和 `scripts/` 复制到：
+
+```text
+%USERPROFILE%\.codex\skills\linuxdo-post-auditor
+```
+
+如果设置了 `CODEX_HOME`，则使用：
+
+```text
+%CODEX_HOME%\skills\linuxdo-post-auditor
+```
+
+更新已有安装时使用：
+
+```powershell
+linuxdo-post-auditor install --force
+```
+
+查看默认安装路径：
+
+```powershell
+linuxdo-post-auditor path
+```
+
+仓库发布到 npm registry 后，安装命令可以简化为：
+
+```powershell
+npm install --global linuxdo-post-auditor
+linuxdo-post-auditor install
+```
+
 ### 作为 Codex Skill
 
 显式引用技能目录：
@@ -116,6 +156,7 @@ python "D:\Linux Do\linuxdo-post-auditor\scripts\audit_draft.py" `
 ## 本地验证
 
 ```powershell
+npm test
 python -B -m unittest scripts/test_audit_draft.py
 python -X utf8 `
   "C:\Users\Administrator\.codex\skills\.system\skill-creator\scripts\quick_validate.py" `
